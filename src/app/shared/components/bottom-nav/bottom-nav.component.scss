@@ -14,14 +14,14 @@
   color: black;
 
   i {
-    font-size: 18px;
+    font-size: var(--font-size-lg);
   }
 
   p {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 }
 
 .active-link {
-  color:#53B175;
+  color: var(--color-primary);
 }
