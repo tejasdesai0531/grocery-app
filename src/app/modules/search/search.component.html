@@ -1,1 +1,16 @@
-<p>search works!</p>
+<div class="container">
+
+  <h1 class="heading">Find Products</h1>
+
+  <div class="search-box">
+    <i class="fas fa-regular fa-magnifying-glass"></i>
+    <input type="text" placeholder="Search Store">
+  </div>
+
+  <div class="category-box">
+    <div class="category-item" *ngFor="let category of categories" [style.background-color]="category.color">
+      <img class="category-item-image" [src]="category.icon" alt="">
+      <h2 class="category-item-name">{{category.name}}</h2>
+    </div>
+  </div>
+</div>
