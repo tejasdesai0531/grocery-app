@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  isFilterVisible = false
+
   categories = [
     {
       name: "Fresh Fruits & Vegetable",
@@ -44,6 +46,10 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleFilter() {
+    this.isFilterVisible = !this.isFilterVisible
   }
 
 }

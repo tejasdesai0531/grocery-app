@@ -11,6 +11,7 @@
   position: relative;
 
   display: flex;
+  column-gap: 20px;
   align-items: center;
 
   input {
@@ -23,7 +24,7 @@
     outline: none;
   }
 
-  i {
+  .search-icon {
     position: absolute;
     margin-left: 15px;
   }
@@ -57,5 +58,84 @@
       line-height: 22px;
       color: var(--color-grey-4);
     }
+  }
+}
+
+
+.filter-box {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  &-visible {
+    top: 0;
+    transition: all .2s;
+  }
+
+  &-hide {
+    top: 100%;
+    transition: all .2s;
+  }
+
+  h1 {
+    position: relative;
+  }
+
+  .close {
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+  }
+
+  .filter-inner-box {
+    background-color: var(--color-grey-6);
+    flex: 1;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+
+    .filter-list {
+
+      margin-top: 20px;
+
+      &-item {
+
+        input {
+          width: 20px;
+          height: 20px;
+          margin-top: 20px;
+          transform: translateY(4px);
+          margin-right: 10px;
+        }
+
+        label {
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    // width: 100%;
+    background-color: var(--color-primary);
+    height: 60px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .filter-btn {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 30px;
+    width: calc(100% - 60px);
   }
 }

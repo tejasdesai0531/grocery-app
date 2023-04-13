@@ -3,8 +3,9 @@
   <h1 class="heading">Find Products</h1>
 
   <div class="search-box">
-    <i class="fas fa-regular fa-magnifying-glass"></i>
+    <i class="search-icon fas fa-regular fa-magnifying-glass"></i>
     <input type="text" placeholder="Search Store">
+    <img src="assets/images/filter-icon.png" (click)="toggleFilter()">
   </div>
 
   <div class="category-box">
@@ -13,4 +14,58 @@
       <h2 class="category-item-name">{{category.name}}</h2>
     </div>
   </div>
+</div>
+
+
+
+<div class="filter-box" [ngClass]="isFilterVisible == true ? 'filter-box-visible' : 'filter-box-hide'">
+
+  <h1 class="heading container"><i class="fa fa-times close" (click)="toggleFilter()"></i>Filters</h1>
+
+  <div class="filter-inner-box container">
+
+    <div class="filter-list">
+      <h2>Category</h2>
+
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+    </div>
+
+    <div class="filter-list">
+      <h2>Brand</h2>
+
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+      <div class="filter-list-item">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn filter-btn container">Apply Filter</button>
 </div>
